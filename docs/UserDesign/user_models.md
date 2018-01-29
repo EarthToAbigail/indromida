@@ -1,6 +1,6 @@
 # User Models
 This document contain the user Model for the project. Basically information about the expected user of the final product and summary of the problems the project is trying to solve. 
-**Note: ** The first release of the project will only contains the features defined in the [user stories](/user_stories.md) .
+**Note: ** The first release of the project will only contains the features defined in the [user stories](user_stories.md) .
 
 ## Personas
 
