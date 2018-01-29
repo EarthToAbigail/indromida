@@ -21,8 +21,7 @@ _______
 4. As a logged-out user I can Log in using my Email/username and password.
 4. As a logged-out user I can visit any chat rooms and chat with no restrictions.
 5. As a logged-out user I can visit the profile of other people.  
-______
-______
+
 ## Aditional Functionalities
 * Server Timeouts inactive Chatrooms
 * Server Must authenticate the Profile picture (undecided)
