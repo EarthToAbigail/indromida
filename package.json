@@ -1,0 +1,34 @@
+{
+  "name": "indromida",
+  "version": "1.0.0",
+  "description": "A social network for musicians and people interested in music",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "indro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahemad12/indromida.git"
+  },
+  "keywords": [
+    "Music",
+    "Musicians",
+    "Social",
+    "Website",
+    "Chatrooms",
+    "Chat",
+    "Friends",
+    "Events",
+    "Projects",
+    "socialize"
+  ],
+  "author": "Abdullah Emad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullahemad12/indromida/issues"
+  },
+  "homepage": "https://github.com/abdullahemad12/indromida#readme"
+}
