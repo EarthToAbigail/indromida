@@ -1,11 +1,11 @@
 #  Database Schema
-##### Rules
+## Rules
 ----------------------
 - Bold and Italics: the relation name
 - Bold attributes: primary keys
 - foriegn keys ar mentioned below the relation as bullet points
-##### Schema:
--------------------
+## Schema:
+
 User(**id**, username, email, firstname, lastname, age, biography, gender, cellphone, profile_picture, hash, birthdate,country, city, profile_privacy, messaging_privacy, created_at)
 
 - age as Time(now) – birthdate

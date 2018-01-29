@@ -3,7 +3,7 @@ This document contain the user Model for the project. Basically information abou
 **Note: ** The first release of the project will only contains the features defined in the [user stories](/user_stories.md) .
 
 ## Personas
----------------
+
 #### User Model 1:
 
 Professional Musicians: They are people whose main profession is music. They consist of graduates  from music Schools. They make money from making concerts and recording and making music.
@@ -49,7 +49,7 @@ Amateur Musicians: those are people who already know how to play music, but they
 2. Help musicians stay connected and reach each others easily. 
 
 ## How Might We: 
--------------------
+
 1. How might we connect musicians to people who would hire them ?
 2. How might we promote and advertise the work of a musician ? 
 3. How might we connect musicians (two or more) who are looking to work on a similar project or who are looking for someone to participate in their project ?
@@ -64,5 +64,5 @@ Amateur Musicians: those are people who already know how to play music, but they
 12. How might we help music students make new friends and have a balanced social life in music school ?
 
 ## Affinity Diagram
----------------------
+
 ![Affinity Diagram](affinity_diagram.jpg?raw=true "Diagram")
