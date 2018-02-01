@@ -74,7 +74,7 @@ unique(_id1, _id2)
 	1.user_id
 \]
 
-####Chats: 
+#### Chats: 
 1. _id
 2. chat_title
 3. chat_description
