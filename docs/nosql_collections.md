@@ -74,14 +74,14 @@ unique(_id1, _id2)
 	1.user_id
 \]
 
--Chats: 
-1._id
-2.chat_title
-3.chat_description
-4.members: \[
+####Chats: 
+1. _id
+2. chat_title
+3. chat_description
+4. members: \[
 	1.user_id
 \] 
-5.message: \[
+5. message: \[
 	1. sender_id
 	2. content
 	3. sent_at
