@@ -5,6 +5,9 @@ This Document contains all the modules and objects in this project and a descrip
 - Please look at the [UML](module_uml.mdj) to see all the attributes and the structure of modules and thier relation to each other. The UML can be downloaded and the viewed using [StarUML](http://staruml.io/download)
 - Please take a look at the [User Stories](UserDesing/user_stories.md) to see all the expected features and functionalities for every module.
 
+## UML:
+![UML](modules_uml.jpg?raw=true "UML")
+_The structure of the Model component responsible for representing all the objects in the database and abstracting the necessary database queries_
 ## User: 
 
 This module represents a registered user. 
@@ -42,3 +45,5 @@ This module represents a notification object that is sent to a certain user if t
 #### Functions: 
 1. **fetch(uid)**: gets the notification for a certain user.
 2. **save()**: inserts a new notification in the database. 
+
+
