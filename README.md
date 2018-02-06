@@ -1,5 +1,5 @@
 # Indromida 
-Indromida is a social website designed particalury for musicians and people who are looking to meet new people with the same musical taste. Data about target users were collected and organized as three (user models)[docs/UserDesign/user_models.md]
+Indromida is a social website designed particalury for musicians and people who are looking to meet new people with the same musical taste. Data about target users were collected and organized as three [user models](docs/UserDesign/user_models.md)
 
 ## Status 
 
