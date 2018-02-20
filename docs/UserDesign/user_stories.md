@@ -27,3 +27,8 @@ _______
 * Server Must authenticate the Profile picture (undecided)
 * When to people mutually like each other. Add them as friends
 * When one of the friends unlike the other, remove the friends tuple
+
+
+## To be Discussed: 
+
+Create a graph with all the countries and their cities to cluster areas together.
