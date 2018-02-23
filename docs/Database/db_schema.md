@@ -57,19 +57,19 @@ musician_plays_instrument(**user_id, instrument**)
 
 - user_id references Musician
 
-Project(**user_id, title**, date, genre ,n_participant, location, Description)
+Project(pid ,user_id, title, date, genre ,n_participant, location, Description)
 
 - user_id references Musician
 
-project_requires_instrument(**user_id, title, instrument**)
+project_requires_instrument(**pid, instrument**)
 
-- user_id, title references Project
+- pid references Project
 
 
-musician_interested_project(**int_user_id, user_id, title**)
+musician_interested_project(**user_id, pid**)
 
 - int_user_id references Musician
-- user_id, title references Project
+- pid references Project
 
 Chat(**chat_id**, chat_title, chat_description)
 
@@ -88,7 +88,7 @@ Like_Notification(**not_id**, created_at, seen_at, sent_to, sent_from)
 - sent_to references User
 - sent_from references User
 
-project_Notification(**not_id**, created_at, seen_at, sent_to, user_id, title)
+project_Notification(**not_id**, created_at, seen_at, sent_to, pid)
 - sent_to references User
 - user_id, title references Project
  

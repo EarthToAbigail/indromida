@@ -36,4 +36,6 @@ This document describes the stored procedures in our database.
 
 4. **Update_project:** Given the attributes of the project, updates this project. 
 
-5. **select_pontential_project:** Given the instrument gets a project the needs someone who can play this instrument. 
+5. **select_pontential_project:** Given the instrument gets a project the needs someone who can play this instrument.
+
+ 
