@@ -27,6 +27,11 @@ a port number should be printed on the terminal.
 
 ## Documentation: 
 
+
+
+## Add contribution and conventions rules for the database(plural and lower case) and modules (singular and upper case)
+
+
 #### Code Structure
 This project follows the MVC pattern in its design.
 - For the Model component, the porject contains a different module representing every object that is present in the database when neccessary. The design of the model modules can be found in [modules.md](docs/modules.md).
