@@ -25,6 +25,7 @@ friends(**user1, user2**)
 
 - user1 references User
 - user2 references User
+
 likes(**user1, user2**)
 
 - user1 references User
