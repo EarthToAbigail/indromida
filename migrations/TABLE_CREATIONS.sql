@@ -22,6 +22,24 @@ CREATE TABLE users
 -- user photos table 
 CREATE TABLE photos
 (
-	user_id INT REFERENCES users, 
-	link VARCHAR(255)
+	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE, 
+	link VARCHAR(255) NOT NULL,
+	PRIMARY KEY(user_id, link)
+)
+
+-- songs liked by users 
+CREATE TABLE users_like_songs
+(
+	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	song_id INT NOT NULL, 
+	PRIMARY KEY(user_id, song_id)
+)
+
+
+-- interests of user
+CREATE TABLE users_have_interests
+(
+	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	tag VARCHAR(20),
+	PRIMARY KET(user_id,tag)
 )
