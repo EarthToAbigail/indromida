@@ -44,8 +44,15 @@ CREATE TABLE users_have_interests
 	PRIMARY KET(user_id,tag)
 )
 
--- Friends Table
+-- Friends Table (Symmetric relation)
 CREATE TABLE friends
+(
+	user1 INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	user2 INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	PRIMARY KEY(user1, user2)
+)
+-- user likes other user (Asymmetric relation)
+CREATE TABLE likes
 (
 	user1 INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
 	user2 INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
