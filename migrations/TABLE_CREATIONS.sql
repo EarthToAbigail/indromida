@@ -1,4 +1,5 @@
-﻿CREATE TABLE users
+﻿-- users table 
+CREATE TABLE users
 (
 	id INT PRIMARY KEY NOT NULL,
 	username VARCHAR(50) UNIQUE,
@@ -17,4 +18,10 @@
 	messaging_privacy BIT,  -- [1: All, 0: Friends, NULL: none]
 	created_at timestamp, 
 	updated_at timestamp
+)
+-- user photos table 
+CREATE TABLE photos
+(
+	user_id INT REFERENCES users, 
+	link VARCHAR(255)
 )
