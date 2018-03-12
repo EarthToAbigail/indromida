@@ -22,7 +22,7 @@ This document describes the stored procedures in our database.
 
 10. **Update_user:** Given the user id and the attributes to be updated, updates the user's record in the users table. 
 
-11. **Get_user:** Given the user id, Selects over all the attributes of the user. 
+11. **Get_user:** Given the user id, Selects over all the attributes of the user. adds a calculated age attribute to the user
 
 12. **setUserType:** Inserts the user_id in either the musician table or the user table according to the Given the Boolean. If the boolean is true adds him to the musician table. 
 
