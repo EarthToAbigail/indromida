@@ -58,3 +58,28 @@ CREATE TABLE likes
 	user2 INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
 	PRIMARY KEY(user1, user2)
 )
+-- facebook login data
+CREATE TABLE facebook_infos
+(
+	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	facebook_id INT NOT NULL, 
+	facebook_email VARCHAR(150)
+)
+
+--google login data
+CREATE TABLE google_info
+(
+	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	google_id INT NOT NULL, 
+	google_email VARCHAR(150)
+)
+
+
+-- twitter login data
+
+CREATE TABLE twitter_info
+(
+	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
+	google_id INT NOT NULL, 
+	google_email VARCHAR(150)
+)
