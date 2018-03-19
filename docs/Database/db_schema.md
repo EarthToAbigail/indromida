@@ -79,7 +79,7 @@ users_members_of_chats(**chat_id, user_id**)
 - chat_id references Chat
 - user_id references User
 
-messages(**chat_id, sender_id**, content, sent_at, seen_at, delivered_at)
+messages(**message_id**, chat_id, sender_id, content, sent_at, seen_at, delivered_at)
 
 - chat_id references Chat.chat_id
 - send_id references User
@@ -88,8 +88,3 @@ like_notifications(**not_id**, created_at, seen_at, sent_to, sent_from)
 
 - sent_to references User
 - sent_from references User
-
-project_notifications(**not_id**, created_at, seen_at, sent_to, pid)
-- sent_to references User
-- user_id, title references Project
- 
