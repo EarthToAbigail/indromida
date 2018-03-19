@@ -41,7 +41,7 @@ CREATE TABLE users_have_interests
 (
 	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
 	tag VARCHAR(20),
-	PRIMARY KET(user_id,tag)
+	PRIMARY KEY(user_id,tag)
 );
 
 -- Friends Table (Symmetric relation)
