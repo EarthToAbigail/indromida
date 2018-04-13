@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "indro"
+    "test": "indro",
+	"migrate": "node-pg-migrate"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,9 @@
     "url": "https://github.com/abdullahemad12/indromida/issues"
   },
   "homepage": "https://github.com/abdullahemad12/indromida#readme",
-  "dependencies": {}
+  "dependencies": {
+    "config": "^1.30.0",
+    "node-pg-migrate": "^2.26.3",
+    "pg": "^7.4.1"
+  }
 }
