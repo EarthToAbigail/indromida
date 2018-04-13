@@ -31,7 +31,7 @@ CREATE TABLE photos
 CREATE TABLE users_like_songs
 (
 	user_id INT NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
-	song_id INT NOT NULL, 
+	song_id TEXT NOT NULL, 
 	PRIMARY KEY(user_id, song_id)
 );
 
