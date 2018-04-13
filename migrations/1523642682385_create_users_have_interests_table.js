@@ -1,5 +1,5 @@
 exports.up = (pgm) => {
-	pgm.createTable("photos", 
+	pgm.createTable("users_have_interests", 
 	{
 		user_id:
 		{
@@ -10,7 +10,7 @@ exports.up = (pgm) => {
 			onDelete: "cascade",
 			onUpdate: "cascade" 
 		},
-		link: {type: "text", notNull: true, primaryKey: true},
+		tag: {type: "varchar(50)", notNull: true, primaryKey: true},
 	},
 	{
 		ifNotExists: true
@@ -18,6 +18,5 @@ exports.up = (pgm) => {
 };
 
 exports.down = (pgm) => {
-	pgm.dropTable("photos", {ifExists: true});
-
+	pgm.dropTable("users_have_interests", {ifExists: true});
 };
