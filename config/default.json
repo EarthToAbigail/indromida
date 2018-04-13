@@ -1,27 +1,2 @@
 {
-	
-  "dev": 
-	{
-    "user": "postgres",
-    "password": "mafia12saleh",
-    "host": "localhost",
-    "port": 5432,
-    "database": "indromida_development"
-  	},
-	"test": 
-	{
-    "user": "postgres",
-    "password": "mafia12saleh",
-    "host": "localhost",
-    "port": 5432,
-    "database": "indromida_test"
-  	},
-	"prod": 
-	{
-    "user": "postgres",
-    "password": "mafia12saleh",
-    "host": "localhost",
-    "port": 5432,
-    "database": "indromida_production"
-  	}				
 }
