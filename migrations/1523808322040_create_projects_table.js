@@ -6,7 +6,7 @@ exports.up = (pgm) => {
 		{
 			type:"int",
 			notNull: true, 
-			references: "users", 
+			references: "musicians", 
 			onDelete: "cascade",
 			onUpdate: "cascade" 
 		},

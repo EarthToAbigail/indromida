@@ -23,5 +23,5 @@ exports.up = (pgm) => {
 };
 
 exports.down = (pgm) => {
-	pgm.dropTable("musicians_play_instruments", {ifExists: true});
+	pgm.dropTable("projects_require_instruments", {ifExists: true});
 };
