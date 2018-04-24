@@ -71,24 +71,29 @@ Musicians_interested_projects(**user_id, pid**)
 - int_user_id references Musician
 - pid references Project
 
-Chats(**chat_id**, chat_title, chat_description)
+Chats(**chat_id**, chat_title, chat_description, created_at, updated_at)
 
 Users_members_of_chats(**chat_id, user_id**)
 
 - chat_id references Chat
 - user_id references User
 
-Messages(**chat_id, sender_id**, content, sent_at, seen_at, delivered_at)
+Messages(**chat_id, sender_id**, content, sent_at, delivered_at)
 
 - chat_id references Chat.chat_id
 - send_id references User
 
-Like_notifications(**not_id**, created_at, seen_at, sent_to, sent_from)
+Notifications(**not_id**, sent_to, url, created_at, seen_at)
 
-- sent_to references User
-- sent_from references User
+Like_notifications(**not_id**, sent_from)
 
-Project_notifications(**not_id**, created_at, seen_at, sent_to, pid)
+- not_id references Notifications
+- sent_to references Users
+- sent_from references Users
+
+Project_notifications(**not_id**, pid)
+
+- not_id references Notifications
 - sent_to references User
-- user_id, title references Project
+- pid references Project
  
