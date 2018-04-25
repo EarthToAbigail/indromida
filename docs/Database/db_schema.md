@@ -83,17 +83,16 @@ Messages(**chat_id, sender_id**, content, sent_at, delivered_at)
 - chat_id references Chat.chat_id
 - send_id references User
 
-Notifications(**not_id**, sent_to, url, created_at, seen_at)
+Notifications(**not_id**, receiver_id, content, url, created_at, seen_at)
 
-Like_notifications(**not_id**, sent_from)
+Like_notifications(**not_id**, sender)
 
 - not_id references Notifications
-- sent_to references Users
-- sent_from references Users
+- sender references Users
+
 
 Project_notifications(**not_id**, pid)
 
 - not_id references Notifications
-- sent_to references User
 - pid references Project
  
