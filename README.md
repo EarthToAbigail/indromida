@@ -14,16 +14,39 @@ This project is still under the development phase and is not ready to be launche
 
 This project is build mainly using Javascript running in the Node.js enviroment in addition to other javascript frameworks. To satisfy all the dependencies you need install a version of [nodejs](https://nodejs.org/en/) >=8 in addition to npm. Depending on your operating system the instructions for installation may vary. Moreover, this project uses [postgreSQL](https://www.postgresql.org) as its database managemenet system which you will need to install as well in order to get the server running properly.
 
+## Getting Started
+
+This section will guide you to setup and start the project on your localhost.
+
+**Notes:** 
+- Make sure all the projects dependencies are satisfied.
+- You will need to clone or download the project before getting started.
+	`git clone git@github.com:abdullahemad12/indromida.git`
+- Make sure to run `npm install` in the projects root directory before proceeding.
+
+
+
+#### Migrations: 
+
+Let us now setup the database.
+
+1. The first step will be creating a postgress database for the project with any name you like. 
+2. Make a copy of the hidden .env.example and name it .env.
+	In the root directory run: `cp .env.example .env`
+3. Modify the following line in the .env file **DATABASE_URL=postgres://postgres@localhost/_database_** by replacing database by your
+database name that you created in step 1.
+4. run the following in your root directory `npm run migrate up`
+
+
 #### Starting the website: 
 
 After installing nodejs and postgreSQL you are ready to start up the server. In order to do so follow these instruction: 
 
-1. Clone the source code into your local computer. Typically by writting the following command in you terminal: 
-	`git clone git@github.com:abdullahemad12/indromida.git`
-2. Start the server buy running the following command in your te: 
-	`node file.js` // has to modified later
+
+1. Start the server buy running the following command in your root directory: 
+	`npm start`
 a port number should be printed on the terminal. 
-3. In the address bar of your browser type in the following address **localhost:port** or **127.0.0.1:port**
+1. In the address bar of your browser type in the following address **localhost:port** or **127.0.0.1:port**
 
 ## Documentation: 
 
