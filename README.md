@@ -35,7 +35,7 @@ Let us now setup the database.
 	In the root directory run: `cp .env.example .env`
 3. Modify the following line in the .env file **DATABASE_URL=postgres://postgres@localhost/_database_** by replacing database by your
 database name that you created in step 1.
-4. run the following in your root directory `npm `
+4. run the following in your root directory `npm run migrate up`
 
 
 #### Starting the website: 
