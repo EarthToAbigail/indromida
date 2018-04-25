@@ -78,7 +78,7 @@ Users_members_of_chats(**chat_id, user_id**)
 - chat_id references Chat
 - user_id references User
 
-Messages(**chat_id, sender_id**, content, sent_at, delivered_at)
+Messages(mid, chat_id, sender_id, content, sent_at, delivered_at)
 
 - chat_id references Chat.chat_id
 - send_id references User

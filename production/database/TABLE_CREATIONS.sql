@@ -1,23 +1,23 @@
 ﻿-- users table 
 CREATE TABLE users
 (
-	id INT PRIMARY KEY NOT NULL,
-	username VARCHAR(50) UNIQUE,
+	id serial PRIMARY KEY,
+	username VARCHAR(100) UNIQUE,
 	email VARCHAR(255) UNIQUE, 
-	firstname VARCHAR(50),
-	lastname VARCHAR(50),
-	birthdate timestamp,
+	firstname VARCHAR(100),
+	lastname VARCHAR(100),
+	birthdate TIMESTAMP,
 	biography TEXT,
 	gender BIT, -- [1: Female, 0: Male, NULL: Other]
 	phone VARCHAR(100),
 	profile_picture VARCHAR(255), --Location of the profile picture
 	password_hash VARCHAR(255),
-	country VARCHAR(60),
-	city VARCHAR(60),
+	country VARCHAR(100),
+	city VARCHAR(100),
 	profile_privacy BIT, -- [1: All, 0: Friends, NULL: none]
 	messaging_privacy BIT,  -- [1: All, 0: Friends, NULL: none]
-	created_at timestamp, 
-	updated_at timestamp
+	created_at TIMESTAMP, 
+	updated_at TIMESTAMP
 );
 -- user photos table 
 CREATE TABLE photos
@@ -62,7 +62,7 @@ CREATE TABLE likes
 CREATE TABLE facebook_infos
 (
 	user_id INT PRIMARY KEY NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
-	facebook_id INT NOT NULL, 
+	facebook_id TEXT NOT NULL, 
 	facebook_email VARCHAR(150)
 );
 
@@ -70,7 +70,7 @@ CREATE TABLE facebook_infos
 CREATE TABLE google_info
 (
 	user_id INT PRIMARY KEY NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
-	google_id INT NOT NULL, 
+	google_id TEXT NOT NULL, 
 	google_email VARCHAR(150)
 );
 
@@ -80,7 +80,7 @@ CREATE TABLE google_info
 CREATE TABLE twitter_info
 (
 	user_id INT PRIMARY KEY NOT NULL REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
-	google_id INT NOT NULL, 
+	google_id TEXT NOT NULL, 
 	google_email VARCHAR(150)
 );
 
@@ -101,7 +101,7 @@ CREATE TABLE musicians_play_instruments
 -- Project created by a musician
 CREATE TABLE projects
 ( 
-	pid INT PRIMARY KEY,
+	pid serial PRIMARY KEY,
 	user_id INT NOT NULL REFERENCES musicians ON DELETE CASCADE ON UPDATE CASCADE,
 	title VARCHAR(150), 
 	date timestamp,
@@ -131,7 +131,9 @@ CREATE TABLE chats
 (
 	chat_id INT PRIMARY KEY,
 	chat_title VARCHAR(100), 
-	chat_description TEXT
+	chat_description TEXT,
+	created_at TIMESTAMP,
+	updated_at TIMESTAMP
 );
 
 -- members of a certain chat
@@ -142,25 +144,44 @@ CREATE TABLE users_members_of_chats
 	PRIMARY KEY(chat_id, user_id)
 );
 
+
+
+
 -- Messages sent to a certain chat
 CREATE TABLE messages
 (
-	message_id INT PRIMARY KEY,
+	mid SERIAL PRIMARY KEY,
 	chat_id INT REFERENCES chats ON DELETE CASCADE ON UPDATE CASCADE,
 	sender_id INT REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE,
-	content TEXT, 
-	sent_at timestamp,
-	seen_at timestamp,
+	content TEXT NOT NULL, 
+	sent_at timestamp NOT NULL,
 	delivered_at timestamp
 );
 
+
+-- Generic Notifications
+
+CREATE TABLE IF NOT EXISTS "notifications" (
+  "not_id" serial PRIMARY KEY,
+  "receiver_id" integer NOT NULL REFERENCES users ON DELETE cascade ON UPDATE cascade,
+  "content" text,
+  "url" text,
+  "created_at" timestamp NOT NULL,
+  "seen_at" timestamp
+);
+
+
 -- Notification sent when someone likes a profile
-CREATE TABLE like_notifications
+CREATE TABLE IF NOT EXISTS "like_notifications" 
 (
-	not_id INT PRIMARY KEY,
-	created_at timestamp,
-	seen_at timestamp,
-	sent_to INT REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE, 
-	sent_from INT REFERENCES users ON DELETE CASCADE ON UPDATE CASCADE
+  "not_id" integer PRIMARY KEY NOT NULL REFERENCES notifications ON DELETE cascade ON UPDATE cascade,
+  "sender_id" integer NOT NULL REFERENCES users ON DELETE cascade ON UPDATE cascade
+);
+
+-- Notification sent when there is an update on project you created or a project you follow
+CREATE TABLE IF NOT EXISTS "project_notifications" 
+(
+  "not_id" integer PRIMARY KEY NOT NULL REFERENCES notifications ON DELETE cascade ON UPDATE cascade,
+  "pid" integer NOT NULL REFERENCES projects ON DELETE cascade ON UPDATE cascade
 );
 

@@ -1,3 +1,4 @@
 .dbconfig.json
 node_modules/
 .env
+migrations.log

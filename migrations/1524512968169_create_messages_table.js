@@ -1,11 +1,11 @@
 exports.up = (pgm) => {
 pgm.createTable("messages", 
 	{
+		mid: "id",
 		chat_id:
 		{
 			type:"int",
 			notNull: true, 
-			primaryKey: true, 
 			references: "chats", 
 			onDelete: "cascade",
 			onUpdate: "cascade" 
@@ -14,7 +14,6 @@ pgm.createTable("messages",
 		{
 			type:"int",
 			notNull: true, 
-			primaryKey: true, 
 			references: "users", 
 			onDelete: "cascade",
 			onUpdate: "cascade" 
