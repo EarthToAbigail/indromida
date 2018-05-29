@@ -20,7 +20,8 @@ _______
 3. As a logged-out user I can Log in using my facebook, twitter or google accounts.
 4. As a logged-out user I can Log in using my Email/username and password.
 4. As a logged-out user I can visit any chat rooms and chat with no restrictions.
-5. As a logged-out user I can visit the profile of other people.  
+5. As a logged-out user I can visit the profile of other people.
+6. As a logged-out user I can create/update my username.
 
 ## Aditional Functionalities
 * Server Timeouts inactive Chatrooms
