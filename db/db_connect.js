@@ -23,7 +23,7 @@ const options = {
   host: params.hostname,
   port: params.port,
   database: params.pathname.split('/')[1],
-  max: process.env.DB_MAX_CONNECTIONS || 2
+  max: process.env.DB_MAX_CONNECTIONS || 2,
   user: params.auth.split(':')[0],
   password: params.auth.split(':')[1]
 };
