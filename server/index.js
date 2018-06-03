@@ -1,4 +1,4 @@
-require('env2')('config.env');
+require('env2')('.env');
 const express = require('Express');
 const logger = require('morgan');
 const path = require('path');
