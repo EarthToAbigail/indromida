@@ -1,5 +1,5 @@
 require('env2')('.env');
-const express = require('Express');
+const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === 'production') {
     app.get('/', (req, res) => {
        res.send({ env: "DEV", page: "HOME" });
     });
-    
+
     // Any other route leads to 404.
     app.get('*', (req, res) => {
         res.status(404).send("Sorry, cant't find what you are looking for...");
@@ -53,5 +53,3 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(port, () => {
     console.log(`Server listening at ${host} on port ${port}`);
 });
-
-
