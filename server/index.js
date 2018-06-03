@@ -1,5 +1,5 @@
 require('env2')('.env');
-const express = require('Express');
+const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
