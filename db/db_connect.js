@@ -29,4 +29,5 @@ const options = {
 };
 
 options.ssl = options.host !== 'localhost';
+console.log(options);
 module.exports = new Pool(options);

@@ -60,10 +60,13 @@ if (process.env.NODE_ENV === 'production') {
 
     app.get('/db', (req, res) => {
       dbConnect.query('SELECT * FROM users', (err, success) => {
+        let result;
         if (err) {
-          res.send(err);
+          result = err;
+        } else {
+          result = { rows: success.rows };
         }
-        res.send({rows: success.rows});
+        res.send(result);
       });
     });
 
