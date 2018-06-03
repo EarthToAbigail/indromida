@@ -24,10 +24,12 @@ const options = {
   port: params.port,
   database: params.pathname.split('/')[1],
   max: process.env.DB_MAX_CONNECTIONS || 2
-  // user: params.auth.split(':')[0],
-  // password: params.auth.split(':')[1]
+  user: params.auth.split(':')[0],
+  password: params.auth.split(':')[1]
 };
 
 options.ssl = options.host !== 'localhost';
-console.log(options);
+
+// pool.connect();
+
 module.exports = new Pool(options);
