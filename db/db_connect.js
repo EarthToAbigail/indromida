@@ -30,6 +30,4 @@ const options = {
 
 options.ssl = options.host !== 'localhost';
 
-// pool.connect();
-
 module.exports = new Pool(options);

@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "indro",
+    "test": "NODE_ENV=test node server/index.js",
     "migrate": "node-pg-migrate",
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",

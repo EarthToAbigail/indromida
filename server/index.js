@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
         if (err) {
           result = err;
         } else {
-          result = "i am happy";
+          result = { rows: success.rows };
         }
         res.send(result);
       });
