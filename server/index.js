@@ -33,17 +33,21 @@ if (process.env.NODE_ENV === 'production') {
     app.get('/', (req, res) => {
         res.send({ env: "PROD", page: "HOME" });
     });
+    // Any other route leads to 404.
+    app.get('*', (req, res) => {
+        res.status(404).send("Sorry, cant't find what you are looking for...");
+    });
     // Ask Express to eventually serve the index.html if the route is not
     // recognized.
-    app.use(express.static('client/build'));
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'));
-    });
+    // app.use(express.static('client/build'));
+    // app.get('*', (req, res) => {
+    //     res.sendFile(path.resolve(__dirname, '..', 'client', 'build', 'index.html'));
+    // });
 } else {
     app.get('/', (req, res) => {
        res.send({ env: "DEV", page: "HOME" });
     });
-    
+
     // Any other route leads to 404.
     app.get('*', (req, res) => {
         res.status(404).send("Sorry, cant't find what you are looking for...");
@@ -53,5 +57,3 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(port, () => {
     console.log(`Server listening at ${host} on port ${port}`);
 });
-
-
