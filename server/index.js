@@ -36,11 +36,14 @@ if (process.env.NODE_ENV === 'production') {
     });
 
     app.get('/db', (req, res) => {
+      let result;
       dbConnect.query('SELECT * FROM users', (err, success) => {
         if (err) {
-          res.send(err);
+          result = err;
+        } else {
+          result = "i am happy";
         }
-        res.send('i am happy');
+        res.send(result);
       });
     });
 
