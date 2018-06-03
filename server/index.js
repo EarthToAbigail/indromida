@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === 'production') {
       dbConnect.query('SELECT * FROM users', (err, success) => {
         if (err) {
           res.send(err);
-        } 
+        }
         res.send({rows: success.rows});
       });
     });
@@ -60,7 +60,7 @@ if (process.env.NODE_ENV === 'production') {
         if (err) {
           res.send(err);
         }
-        res.send({rows: success.rows});
+        res.send('i am happy');
       });
     });
 
