@@ -10,7 +10,8 @@
     "test": "indro",
     "migrate": "node-pg-migrate",
     "start": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "dev": "nodemon server/index.js",
+    "heroku-postbuild": "npm install --production"
   },
   "repository": {
     "type": "git",
