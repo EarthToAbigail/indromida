@@ -9,7 +9,7 @@
   "scripts": {
     "test": "indro",
     "migrate": "node-pg-migrate",
-    "start": "npm run migrate up && node server/index.js",
+    "start": "node server/index.js",
     "dev": "nodemon server/index.js"
   },
   "repository": {
