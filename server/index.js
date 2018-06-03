@@ -10,14 +10,19 @@ const app = express();
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || 'localhost';
 
-app.use(logger('dev'));
+//This will conveniently log all the routes in terminal when in
+//Dev environment.
+if (process.env.NODE_ENV !== 'production') {
+    app.use(logger('dev'));
+}
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
     cookieSession({
         maxAge: 30 * 24 * 60 * 60,
         keys: [process.env.COOKIE_SECRET],
-        name: "Indromida"
+        name: "session"
     })
 );
 
