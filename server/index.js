@@ -61,8 +61,6 @@ if (process.env.NODE_ENV === 'production') {
       dbConnect.query('SELECT * FROM users', (err, success) => {
         if (err) {
           res.send(err);
-        } else if (success.rowCount === 0) {
-          res.send('table empty');
         }
         res.send({rows: success.rows});
       });
