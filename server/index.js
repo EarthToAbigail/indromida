@@ -64,7 +64,7 @@ if (process.env.NODE_ENV === 'production') {
         } else if (success.rowCount === 0) {
           res.send('table empty');
         }
-        res.send(success.rows);
+        res.send({rows: success.rows});
       });
     });
 
