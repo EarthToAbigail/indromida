@@ -7,12 +7,12 @@ Manual for developers. This document is for mainly describing the structure of t
 
 ## Table of contents
 
-- [Introduction](## Introduction)
-- [Developers Guidelines](## Developers Guidelines)
+- [Introduction](#introduction)
+- [Developers Guidelines](#developers)
 - [Front End](## Front End)
 - [Back End](## Back End)
-	- [Postgress Database](#### Postgress Database)
-	- [Postgress Functions](#### Postgress Functions)
+	- [Postgress Database](#postgress)
+	- [Postgress Functions](#postgress functions)
 
 
 ## Introduction
