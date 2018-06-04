@@ -7,10 +7,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "NODE_ENV=test node server/index.js",
+    "test": "NODE_ENV=test node tests/testsDB.js |tap-spec",
     "migrate": "node-pg-migrate",
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix",
     "heroku-postbuild": "npm run migrate up"
   },
   "repository": {
@@ -48,7 +50,17 @@
     "pg": "^7.4.1"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.9.1",
     "nodemon": "^1.17.5",
-    "randomstring": "^1.1.5"
+    "prettier": "^1.13.4",
+    "randomstring": "^1.1.5",
+    "tap-spec": "^4.1.2",
+    "tape": "^4.9.0"
   }
 }
