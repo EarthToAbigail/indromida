@@ -13,7 +13,6 @@ const host = process.env.HOST || 'localhost';
 
 // This will conveniently log all the routes in terminal when in
 // Dev environment.
-
 if (process.env.NODE_ENV !== 'production') {
   app.use(logger('dev'));
 }

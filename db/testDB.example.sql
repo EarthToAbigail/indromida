@@ -1,4 +1,6 @@
---
+-- EXAMPLE FILE!! Change the value of "USERNAME" to your username in your test
+-- database that you set up locally. Then rename the file to 'testDB.sql'.
+
 -- PostgreSQL database dump
 --
 BEGIN;

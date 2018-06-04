@@ -1,9 +1,8 @@
-const { Pool } = require('pg');
-
-const url = require('url');
 require('env2')('.env');
+const { Pool } = require('pg');
+const url = require('url');
 
-let DATABASE_URL = process.env.DATABASE_URL;
+let { DATABASE_URL } = process.env;
 
 if (process.env.NODE_ENV === 'test') {
   DATABASE_URL = process.env.TEST_DATABASE_URL;
@@ -14,7 +13,6 @@ if (!DATABASE_URL) {
 }
 
 const params = url.parse(DATABASE_URL);
-
 const options = {
   host: params.hostname,
   port: params.port,
@@ -25,5 +23,4 @@ const options = {
 };
 
 options.ssl = options.host !== 'localhost';
-
 module.exports = new Pool(options);
