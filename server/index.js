@@ -38,13 +38,8 @@ if (process.env.NODE_ENV === 'production') {
 
   // Testing db deploy on heroku
   app.get('/db', (req, res) => {
-    let result;
     dbConnect.query('SELECT * FROM users', (err, success) => {
-      if (err) {
-        result = err;
-      } else {
-        result = { rows: success.rows };
-      }
+      const result = err || { rows: success.rows };
       res.send(result);
     });
   });
@@ -60,6 +55,14 @@ if (process.env.NODE_ENV === 'production') {
 } else {
   app.get('/', (req, res) => {
     res.send({ env: 'DEV', page: 'HOME' });
+  });
+
+  // Testing db deploy locally.
+  app.get('/db', (req, res) => {
+    dbConnect.query('SELECT * FROM users', (err, success) => {
+      const result = err || { rows: success.rows };
+      res.send(result);
+    });
   });
 
   // Any other route leads to 404.
